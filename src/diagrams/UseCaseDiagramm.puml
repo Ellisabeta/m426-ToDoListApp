@@ -1,0 +1,47 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+
+package "Task Management" as TM{
+    usecase "TDL-1: Add/Delete/Edit To-Do Tasks" as UC1
+    usecase "TDL-10: Overview of Tasks" as UC10
+    usecase "TDL-23: Progress Tracker for Each Task" as UC23
+}
+
+package "Character Management" as CM{
+    usecase "TDL-4: Default Character" as UC4
+    usecase "TDL-5: Upgrade Character After Completing Task" as UC5
+    usecase "TDL-25: Customize Character Appearance" as UC25
+    usecase "TDL-21: Profile View with Level and Items" as UC21
+}
+
+package "Gamification" as GA{
+    usecase "TDL-15: Task Points Based on Difficulty" as UC15
+    usecase "TDL-16: Display Experience Points" as UC16
+    usecase "TDL-17: Gain Experience Points on Task Completion" as UC17
+    usecase "TDL-18: Reset Experience Bar and Level Up" as UC18
+    usecase "TDL-19: Receive Level-Up Notification" as UC19
+    usecase "TDL-20: Choose New Item on Level Up" as UC20
+    usecase "TDL-22: Progressive Experience Requirements" as UC22
+}
+
+package "Social Features/User Engagement" as SF{
+    usecase "TDL-28: Share Progress and Character" as UC28
+    usecase "TDL-29: Add Friends and See Their Progress" as UC29
+    usecase "TDL-30: Request Competition with Friends" as UC30
+    usecase "TDL-24: Receive Motivational Messages" as UC24
+}
+
+package "Authentication" as AU{
+    usecase "TDL-6: Google Login" as UC6
+}
+
+User --> TM
+User --> CM
+User --> GA
+User --> SF
+User --> AU
+
+@enduml
