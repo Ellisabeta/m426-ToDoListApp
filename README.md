@@ -2,5 +2,6 @@
 
 ### Docker Command
 ```
-docker run --name TDL_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres:16
+docker run --name tdl -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=tdl -e MYSQL_USER=user
+ -e MYSQL_PASSWORD=password -p 3306:3306 -d mysql:8.0
 ```

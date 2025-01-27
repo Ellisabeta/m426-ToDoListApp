@@ -16,20 +16,14 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class TaskDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column (nullable = false)
     private String name;
 
-    @Column (nullable = false)
     private LocalDate finishBy;
 
-    @Column (nullable = false)
     private boolean finished;
 
-    @Enumerated(EnumType.STRING)
     private DificultyEnum dificulty;
 
 }
