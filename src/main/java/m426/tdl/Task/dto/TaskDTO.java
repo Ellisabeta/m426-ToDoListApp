@@ -1,10 +1,12 @@
-package m426.tdl.Task;
+package m426.tdl.Task.dto;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import m426.tdl.Task.DificultyEnum;
+
 import java.time.LocalDate;
 
 
@@ -12,9 +14,7 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "task")
-public class Task {
+public class TaskDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
